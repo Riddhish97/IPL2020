@@ -1,0 +1,68 @@
+
+# IPL Statistics
+
+> Project has team vise IPL statistics from 2008-2019 match
+
+
+![IPL](./public/images/dashboard.png)
+
+---
+
+## Table of Contents (Optional)
+
+> If your `README` has a lot of info, section headers might be nice.
+
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Support](#support)
+- [License](#license)
+
+
+---
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+- Node JS v8.0.0+
+- MongoDB v3.6+
+- npm v6.4.1+
+## Installation
+```shell
+$ git clone https://github.com/Riddhish97/IPL2020.git
+$ npm install
+```
+> Create file from sample file
+
+- Create .env file from sample and set port
+- Create databse.js file from database.sample.js
+
+Note - Default port for mongoDB is 27017 if you have mongoDb running on different port please update it in database.js
+> Run this file which will create user in mongoDB and store data in your DB
+```shell
+$ node scripts/initScripts.js
+$ node scripts/storeDataInDB.js  
+```
+> Run the project
+```shell
+$ node bin/www
+```
+
+---
+
+## Support
+
+Reach out to me at one of the following places!
+
+- Email at <a href="mailto:riddhishraj@gmail.com" target="_blank">`riddhishraj@gmail.com`</a>
+- Twitter at <a href="http://twitter.com/mr_rajgor1997" target="_blank">`@mr_rajgor1997`</a>
+- Insert more social links here.
+
+---
+
+## License
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
