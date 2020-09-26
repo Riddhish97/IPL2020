@@ -154,7 +154,7 @@ let customHelper = {
         sort['sort_field'] = field_name;
         var new_url = current_url[0] + "?" + queryString.stringify(sort);
         if (display_field != null) {
-            return new Handlebars.SafeString('<th class="' + sort_class + '"><a href="' + new_url + '">' + display_field + '</a></th>');
+            return new Handlebars.SafeString('<th class="' + sort_class + '"><a href="' + new_url + '" class="d-block">' + display_field + '</a></th>');
         } else {
             return new_url;
         }
