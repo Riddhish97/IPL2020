@@ -11,6 +11,15 @@ router.get('/', async function (req, res, next) {
     if (req.query.team2) {
       team2 = req.query.team2;
     }
+
+    // if sorting parameter
+    let sort = {};
+    if (req.query.sort && req.query.sort_field) {
+      //sorting field
+      sort[req.query.sort_field] = req.query.sort == "desc" ? -1 : 1;
+    } else {
+      sort['season'] = -1;
+    }
     let match = await db.models.match_data.aggregate([{
       $match: {
         $or: [{
@@ -30,9 +39,7 @@ router.get('/', async function (req, res, next) {
         ]
       }
     }, {
-      $sort: {
-        season: -1
-      }
+      $sort: sort
     }]);
     let matchWinnerCount = await db.models.match_data.aggregate([{
       $match: {
