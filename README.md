@@ -51,7 +51,7 @@ $ node bin/www
 `Note - If you have docker and docker-compose install in your PC then run only the below command to start project`
 
 ```shell
-docker-compose up -d --build 
+$ docker-compose up -d --build 
 ```
 Project will start on `3006` port. You can update port in `docker-compose.yml` for project and mongoDB in case of docker.
 

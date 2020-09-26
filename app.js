@@ -7,9 +7,14 @@ if (process.env.IS_DOCKER.toUpperCase() === "TRUE") {
 }
 //load all models in global variable
 global.db = require('./models');
+const {
+  commonMiddelware
+} = require("./common/middleware");
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+const session = require('express-session'); //Create a session middleware
+const flash = require('connect-flash');
 var cookieParser = require('cookie-parser');
 const exphbs = require('express-handlebars');
 var logger = require('morgan');
@@ -31,9 +36,14 @@ app.use(express.json());
 app.use(express.urlencoded({
   extended: false
 }));
+//express session
+app.use(session(config.session));
+//use connect flash
+app.use(flash());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(commonMiddelware);
 app.use('/', indexRouter);
 console.log("Server started!");
 // catch 404 and forward to error handler
