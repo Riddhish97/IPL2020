@@ -39,7 +39,7 @@ $ npm install
 - Create databse.js file from database.sample.js
 
 Note - Default port for mongoDB is 27017 if you have mongoDb running on different port please update it in database.js
-> Run this file which will create user in mongoDB and store data in your DB
+> Run this below code which will create user in mongoDB and store data in your DB
 ```shell
 $ node scripts/initScripts.js
 $ node scripts/storeDataInDB.js  
@@ -57,7 +57,6 @@ Reach out to me at one of the following places!
 
 - Email at <a href="mailto:riddhishraj@gmail.com" target="_blank">`riddhishraj@gmail.com`</a>
 - Twitter at <a href="http://twitter.com/mr_rajgor1997" target="_blank">`@mr_rajgor1997`</a>
-- Insert more social links here.
 
 ---
 
