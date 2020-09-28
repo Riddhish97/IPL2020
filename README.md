@@ -8,7 +8,7 @@
 
 ---
 
-## Table of Contents (Optional)
+## Table of Contents 
 
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
