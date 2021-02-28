@@ -4,7 +4,7 @@
 > Project has team vise IPL statistics from 2008-2019 match
 
 
-![IPL](./public/images/dashboard.png)
+![IPL](./public/images/dashboard.png=250x)
 
 ---
 
